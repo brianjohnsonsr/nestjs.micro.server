@@ -1,6 +1,7 @@
-import { Controller, Logger, Post, Body } from '@nestjs/common';
+import { Controller, Logger } from '@nestjs/common';
 import { MathService } from './math.service';
 import { MessagePattern } from '@nestjs/microservices';
+import { Observable } from 'rxjs';
 
 @Controller()
 export class AppController {
