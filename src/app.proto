@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package app;
+
+// Declare a service for each controller you have
+service AppController {
+  // Declare an rpc for each method that is called via gRPC
+  rpc Accumulate (NumberArray) returns (SumOfNumberArray);
+}
+
+// Declare the types used above
+message NumberArray {
+  repeated double data = 1;
+}
+message SumOfNumberArray {
+  double sum = 1;
+}

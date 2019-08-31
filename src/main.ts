@@ -2,15 +2,16 @@ import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
 import { Logger } from '@nestjs/common';
 import { Transport } from '@nestjs/microservices';
+import { join } from 'path'; // <-- Add this
 
-// Create a logger instance
 const logger = new Logger('Main');
-
-// Create the microservice options object
 const microserviceOptions = {
-  transport: Transport.REDIS,
+  // transport: Transport.REDIS,  <-- Change this
+  transport: Transport.GRPC,  //  <-- to this
   options: {
-    url: 'redis://localhost:6379',
+    // url: 'redis://localhost:6379',                  <-- remove this
+    package: 'app', //                                 <-- add this
+    protoPath: join(__dirname, '../src/app.proto'), // <-- & this
   },
 };
 
