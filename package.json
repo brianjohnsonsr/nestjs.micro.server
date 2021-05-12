@@ -24,7 +24,7 @@
     "@nestjs/core": "^6.0.0",
     "@nestjs/microservices": "^6.5.3",
     "@nestjs/platform-express": "^6.0.0",
-    "grpc": "^1.23.3",
+    "grpc": "^1.24.9",
     "redis": "^2.8.0",
     "reflect-metadata": "^0.1.12",
     "rimraf": "^2.6.2",
